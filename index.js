@@ -37,10 +37,10 @@ app.post("/sign_up",(req,res)=>{
         }
         console.log("Record Inserted Successfuly")
     })
-return res.redirect('signup_succes.html')
+ res.redirect('signup_succes.html')
 })
 
-app.get("/",(req,res)=>{
+/*app.get("/",(req,res)=>{
     res.set({
         "Access-Control-Allow-Origin":'*'
         
@@ -50,7 +50,7 @@ app.get("/",(req,res)=>{
 //.listen(8080);
 
 //console.log("Listening on port  8080")
-
+*/
 const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
