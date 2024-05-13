@@ -9,7 +9,7 @@ app.use(express.static('docs'));
 app.use(bodyParser.urlencoded({
     extended:true
 }))
-mongoose.connect('mongodb+srv://codedipa:pygHqt8jjzo30M5s@druti.suehx0x.mongodb.net/?retryWrites=true&w=majority&appName=druti')
+mongoose.connect('mongodb://localhost:27017/Database')
 var db=mongoose.connection
 db.on('error',()=> console.log("Error in Connecting to Database"))
 db.once('open', () => console.log('Connected to Database'));
