@@ -79,11 +79,12 @@ input[type=submit]:hover {
 }
 
 .gender-options {
-    display: flex;
+    display: inline-block;
     gap: 10px; /* Optional: Adds space between options */
     align-items: center; 
 }
 
 .gender-options input[type="radio"] {
+      display: inline-block;
     margin-right: 5px;
 }
