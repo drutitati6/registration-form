@@ -77,3 +77,13 @@ input[type=submit]{
 input[type=submit]:hover {
     background-color:#3245a3;
 }
+
+.gender-options {
+    display: flex;
+    gap: 10px; /* Optional: Adds space between options */
+    align-items: center; 
+}
+
+.gender-options input[type="radio"] {
+    margin-right: 5px;
+}
