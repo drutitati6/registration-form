@@ -16,7 +16,7 @@ db.on('error', () => console.log("Error in Connecting to Database"));
 db.once('open', () => console.log('Connected to Database'));
 
 const VERCEL_API_BASE_URL = "https://api.vercel.com"; // Base URL for Vercel API
-const VERCEL_ACCESS_TOKEN = "<YOUR_VERCEL_ACCESS_TOKEN>"; // Your Vercel Access Token
+const VERCEL_ACCESS_TOKEN = "aFsFWBb9YXvZdWPimcU5gimN"; // Your Vercel Access Token
 
 // Function to deploy a new version of a project using Vercel API
 async function deployProject() {
