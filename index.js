@@ -1,7 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-var axios = require("axios"); // Import Axios for making HTTP requests
+var axios = require("axios"); 
 
 const app = express();
 
@@ -15,18 +15,18 @@ var db = mongoose.connection;
 db.on('error', () => console.log("Error in Connecting to Database"));
 db.once('open', () => console.log('Connected to Database'));
 
-const VERCEL_API_BASE_URL = "https://api.vercel.com"; // Base URL for Vercel API
-const VERCEL_ACCESS_TOKEN = "aFsFWBb9YXvZdWPimcU5gimN"; // Your Vercel Access Token
+const VERCEL_API_BASE_URL = "https://api.vercel.com"; 
+const VERCEL_ACCESS_TOKEN = "aFsFWBb9YXvZdWPimcU5gimN"; 
 
 // Function to deploy a new version of a project using Vercel API
 async function deployProject() {
     try {
-        // Example: Deploying a project
+      
         const response = await axios.post(`${VERCEL_API_BASE_URL}/v11/now/deployments`, {
             name: "MyProject",
             files: [{ file: "index.html", data: "<html><body>Hello World!</body></html>" }],
             version: 2, // Example version number
-            teamId: "<YOUR_TEAM_ID>" // Replace with your team ID
+           
         }, {
             headers: {
                 Authorization: `Bearer ${VERCEL_ACCESS_TOKEN}`,
@@ -70,5 +70,5 @@ app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
 
-// Example: Call deployProject function to deploy a project
+
 deployProject();
