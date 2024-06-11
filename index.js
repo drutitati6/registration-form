@@ -15,7 +15,7 @@ var db = mongoose.connection;
 db.on('error', () => console.log("Error in Connecting to Database"));
 db.once('open', () => console.log('Connected to Database'));
 
-const VERCEL_API_BASE_URL = "https://registration-form-2u1t2k2vq-drutis-projects.vercel.app"; 
+const VERCEL_API_BASE_URL = "registration-form-tan-omega.vercel.app"; 
 const VERCEL_ACCESS_TOKEN = "aFsFWBb9YXvZdWPimcU5gimN"; 
 
 // Function to deploy a new version of a project using Vercel API
